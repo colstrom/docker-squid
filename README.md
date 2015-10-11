@@ -3,6 +3,10 @@ docker-squid
 
 A full-featured Web proxy cache server.
 
+Volumes
+-------
+  * `/var/log/squid/`
+
 License
 -------
 [MIT](https://tldrlegal.com/license/mit-license)
