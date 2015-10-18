@@ -1,5 +1,14 @@
 #!/bin/sh
 
+track() {
+  log=$1
+  if [ ! -z $log ]; then
+    touch $log
+    owner set squid $log || exit 1
+    tail -F $log &
+  fi
+}
+
 cache_dir=$(grep '^cache_dir' /etc/squid/squid.conf | awk '{ print $3 }')
 
 if [ ! -z $cache_dir ]; then
@@ -9,5 +18,8 @@ if [ ! -z $cache_dir ]; then
     /usr/sbin/squid -z
   fi
 fi
+
+track $(grep '^cache_log' /etc/squid/squid.conf | awk '{ print $2 }')
+track $(grep '^access_log' /etc/squid/squid.conf | awk '{ print $2 }' | cut -d : -f 2)
 
 exec /usr/sbin/squid -N $@
