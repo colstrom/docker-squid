@@ -9,6 +9,7 @@ Exposed Ports
 
 Volumes
 -------
+  * `/etc/squid/`
   * `/var/log/squid/`
 
 License
