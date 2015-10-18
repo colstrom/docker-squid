@@ -7,6 +7,6 @@ RUN sed -i 's/^#cache_dir/cache_dir/' /etc/squid/squid.conf \
     && chmod a+x /usr/local/bin/squid
 
 EXPOSE 3128
-VOLUME ["/var/log/squid", "/var/cache/squid"]
+VOLUME ["/etc/squid", "/var/cache/squid", "/var/log/squid"]
 
 ENTRYPOINT ["squid"]
