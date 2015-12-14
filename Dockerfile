@@ -1,4 +1,4 @@
-FROM colstrom/alpine:main
+FROM colstrom/alpine
 RUN apk-install squid
 ADD squid.sh /usr/local/bin/squid
 RUN sed -i 's/^#cache_dir/cache_dir/' /etc/squid/squid.conf \
