@@ -1,22 +1,21 @@
-docker-squid
-------------
+# docker-squid
 
 A full-featured Web proxy cache server.
 
-Exposed Ports
--------------
-  * 3128
+## Exposed Ports
 
-Volumes
--------
-  * `/etc/squid/`
-  * `/var/cache/squid/`
-  * `/var/log/squid/`
+* 3128
 
-License
--------
+## Volumes
+
+* `/etc/squid/`
+* `/var/cache/squid/`
+* `/var/log/squid/`
+
+## License
+
 [MIT](https://tldrlegal.com/license/mit-license)
 
-Contributors
-------------
+## Contributors
+
 * [Chris Olstrom](https://colstrom.github.io/) | [e-mail](mailto:chris@olstrom.com) | [Twitter](https://twitter.com/ChrisOlstrom)
